@@ -1,4 +1,4 @@
-# About
+# About Me
 
-This is where you put the contents of your *About* page. Like all your pages, it's in [Markdown](https://guides.github.com/features/mastering-markdown/) format.
+I am a student at the University of Queensland taking Electrical Engineering and Computer Science learning about AI through courses in machine learning, computer vision, deep learning, and AI as a whole. I have started learning with fastai this year
 
