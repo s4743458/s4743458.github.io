@@ -22,4 +22,7 @@ From this, results were remembered and compared to the gpu graph as descriptions
 
 ## Training a model on different images
 
-The next task was to train a model that can recognise multiple classes of images as one trained model. Starting from the original *00-is-it-a-bird-creating-a-model-from-your-own-data.ipynb* model, I first tested using different species of bears following a lecture from ELEC4630. After playing around with this, 
+The next task was to train a model that can recognise multiple classes of images as one trained model. Starting from the original *00-is-it-a-bird-creating-a-model-from-your-own-data.ipynb* model, I first tested using different types of bears following a lecture from ELEC4630. To do this, I changed the search terms to get grizzly, black and teddy bears from a Duckduckgosearch. During this I learned that it is important to put thought into the search terms used, as I ended up training my model on images using the terms 'black', 'grizzly', and 'teddy', which came up with images like these:
+
+![](/images/bears.jpg)
+
