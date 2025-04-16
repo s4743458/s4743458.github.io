@@ -14,7 +14,7 @@ This was set up using a very simple version of the is-it-a-bird project, where o
 
 After this, CPU graphs were attempted to be created. Most likely due to a Ubuntu update or some docker error, but after many attempts to install it was unable to add as a command, or other relevant charts such as btop.
 
-![alt text](images/nvtop.png)
+![](/images/nvtop.png)
 
 Because of this, htop was used to get the instantaneous cpu usage. While not an ideal solution, this worked to show the peak values for the batch training.
 From this, results were remembered and compared to the gpu graph as descriptions more than directly as charts.
@@ -22,4 +22,4 @@ From this, results were remembered and compared to the gpu graph as descriptions
 
 ## Training a model on different images
 
-The next task was to train a model that can recognise multiple images from 
+The next task was to train a model that can recognise multiple classes of images as one trained model. Starting from the original *00-is-it-a-bird-creating-a-model-from-your-own-data.ipynb* model, I first tested using different species of bears following a lecture from ELEC4630. After playing around with this, 
