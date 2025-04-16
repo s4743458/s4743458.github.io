@@ -1,8 +1,5 @@
 # Implementing from 00-is-it-a-bird-creating-a-model-from-your-own-data.ipynb from fastai/course22
 
-1. TOC
-{:toc}
-
 ## First run
 The first task once the dev container was up and running was to try out the *00-is-it-a-bird-creating-a-model-from-your-own-data.ipynb* notebook from fastai/course22. This seemed a simple enough task, and was quite simple upon my first run through. I successfully imported the libraries, downloaded the images through a duckduckgo search using the `search_images_ddg` function, and trained a model on the images using all steps in the notebook.
 
@@ -26,3 +23,5 @@ The next task was to train a model that can recognise multiple classes of images
 
 ![](/images/bears.jpg)
 
+Which as can be seen from images such as the tortoise in a suit(?) that these are largely not relevant images to train on.
+After correcting this and getting the tests to work, the classes were changed to the required ones with 'bird', 'cat', 'dog', 'airplane', and 'automobile'. However, while attempting this I encountered an issue several times on the line: `download_images(dest, urls=search_images(f'{o} photo'))` where I would get a 403 error, meaning my IP was likely blocked from too many searches. This did hold up progress as i was unable to work around this for a few days, but eventually was able to search again. Once the images were downloaded, I could once again train the model. From here finishing the training was simple, and the task was completed.
