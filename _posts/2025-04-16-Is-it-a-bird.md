@@ -1,75 +1,25 @@
-# Learning the basics from 00-is-it-a-bird-creating-a-model-from-your-own-data.ipynb from fastai/course22
-
-Here's the table of contents:
+# Implementing from 00-is-it-a-bird-creating-a-model-from-your-own-data.ipynb from fastai/course22
 
 1. TOC
 {:toc}
 
-## Basic setup
+## First run
+The first task once the dev container was up and running was to try out the *00-is-it-a-bird-creating-a-model-from-your-own-data.ipynb* notebook from fastai/course22. This seemed a simple enough task, and was quite simple upon my first run through. I successfully imported the libraries, downloaded the images through a duckduckgo search using the `search_images_ddg` function, and trained a model on the images using all steps in the notebook.
 
-Jekyll requires blog post files to be named according to the following format:
 
-`YEAR-MONTH-DAY-filename.md`
+## Analysing performance
+From here, the task was to first test this on cpu and then on gpu, using charts such as `nvtop` and `btop` to analyse the difference in both runtime and load when training using a variety of batch sizes.
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `filename` is whatever file name you choose, to remind yourself what this post is about. `.md` is the file extension for markdown files.
+This was set up using a very simple version of the is-it-a-bird project, where once the images were downloaded the only cells that remained were the initial imports, a function that ran the training on a batch size as a parameter and small cells that ran the individual tests. The first tests were run on GPU as this was the first container I built, and this ran successfully the first time, where nvtop charts were gathered along with the execution time for each test.
 
-The first line of the file should start with a single hash character, then a space, then your title. This is how you create a "*level 1 heading*" in markdown. Then you can create level 2, 3, etc headings as you wish but repeating the hash character, such as you see in the line `## File names` above.
+After this, CPU graphs were attempted to be created. Most likely due to a Ubuntu update or some docker error, but after many attempts to install it was unable to add as a command, or other relevant charts such as btop.
 
-## Basic formatting
+![alt text](images/nvtop.png)
 
-You can use *italics*, **bold**, `code font text`, and create [links](https://www.markdownguide.org/cheat-sheet/). Here's a footnote [^1]. Here's a horizontal rule:
+Because of this, htop was used to get the instantaneous cpu usage. While not an ideal solution, this worked to show the peak values for the batch training.
+From this, results were remembered and compared to the gpu graph as descriptions more than directly as charts.
 
----
 
-## Lists
+## Training a model on different images
 
-Here's a list:
-
-- item 1
-- item 2
-
-And a numbered list:
-
-1. item 1
-1. item 2
-
-## Boxes and stuff
-
-> This is a quotation
-
-{% include alert.html text="You can include alert boxes" %}
-
-...and...
-
-{% include info.html text="You can include info boxes" %}
-
-## Images
-
-![](/images/logo.png "fast.ai's logo")
-
-## Code
-
-General preformatted text:
-
-    # Do a thing
-    do_thing()
-
-Python code and output:
-
-```python
-# Prints '2'
-print(1+1)
-```
-
-    2
-
-## Tables
-
-| Column 1 | Column 2 |
-|-|-|
-| A thing | Another thing |
-
-## Footnotes
-
-[^1]: This is the footnote.
-
+The next task was to train a model that can recognise multiple images from 
